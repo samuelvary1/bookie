@@ -1,4 +1,10 @@
 Bloggy::Application.routes.draw do
+  resources :accounts
+
+
+  resources :users
+
+
   get "welcome/index"
 
   root :to => "welcome#index"
