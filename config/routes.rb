@@ -1,14 +1,20 @@
 Bloggy::Application.routes.draw do
+
+  root :to => "welcome#index"
+  
   get "welcome/index"
   get "signup" => "users#new", :as => "signup"
 
   resources :accounts
-  resources :users
+  resources :users, :user_sessions
+  
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
 
 
 
 
-  root :to => "welcome#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

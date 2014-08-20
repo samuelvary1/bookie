@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bloggy</title>
+  <title>Bookie</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<center>
+		<div id="nav">
+			<%= link_to "Sign up", new_user_path %> |
+			<%= link_to "Login", :login %> |
+			<%= link_to "Current Users", users_path %>
+		</div>
+	</center>
 
 <%= yield %>
 
