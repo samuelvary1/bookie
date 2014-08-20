@@ -1,11 +1,12 @@
 Bloggy::Application.routes.draw do
+  get "welcome/index"
+  get "signup" => "users#new", :as => "signup"
+
   resources :accounts
-
-
   resources :users
 
 
-  get "welcome/index"
+
 
   root :to => "welcome#index"
 
