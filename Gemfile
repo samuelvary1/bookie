@@ -27,6 +27,8 @@ gem 'authlogic'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'better'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
@@ -37,4 +39,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end

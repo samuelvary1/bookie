@@ -6,10 +6,11 @@ Bloggy::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
 
   resources :accounts
-  resources :users, :user_sessions
+  resources :users
+  resources :sessions
   
-  match 'login' => 'user_sessions#new', :as => :login
-  match 'logout' => 'user_sessions#destroy', :as => :logout
+  match 'login' => 'sessions#new', :as => :login
+  match 'logout' => 'sessions#destroy', :as => :logout
 
 
 
