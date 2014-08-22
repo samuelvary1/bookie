@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
   <title>Gambling Time</title>
+=======
+  <title>Blog2</title>
+>>>>>>> working
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,7 +16,11 @@
 <%= yield %>
 
 <!-- tells you who is logged in -->
+<<<<<<< HEAD
 <center>
+=======
+
+>>>>>>> working
 <div id="user_nav">
 
   <% if current_user %>
@@ -31,7 +39,11 @@
   </br>
   <% end %>
 </div>
+<<<<<<< HEAD
 </center>
+=======
+
+>>>>>>> working
 
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
