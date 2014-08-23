@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
 
   attr_accessible :id, :name, :email, :password, :password_confirmation, :bio
 
-
   validates_uniqueness_of :email
 
 end
