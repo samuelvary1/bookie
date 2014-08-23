@@ -2,7 +2,8 @@
 <p id="notice"><%= notice %></p>
 <table>
   <tr>
-    <th>Username</th>
+    <th>Avatar</th>
+    <th>Name</th>
     <th>Email</th>
     <th></th>
     <th></th>
@@ -11,6 +12,7 @@
  
 <% @users.each do |user| %>
   <tr>
+    <td><%= image_tag avatar_url(user) %></td>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
