@@ -1,4 +1,5 @@
 class AccountsController < ApplicationController
+  before_filter :authorize
   # GET /accounts
   # GET /accounts.json
   def index

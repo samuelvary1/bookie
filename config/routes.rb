@@ -4,6 +4,8 @@ Bloggy::Application.routes.draw do
   
   get "welcome/index"
   get "signup" => "users#new", :as => "signup"
+  get "deposits" => "accounts#new", :as => "deposits"
+
 
   resources :accounts
   resources :users
