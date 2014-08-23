@@ -14,8 +14,7 @@
 <%= yield %>
 
 <!-- tells you who is logged in -->
-
-<center>
+<p>
 <div id="user_nav">
 
   <% if current_user %>
@@ -35,7 +34,7 @@
   </br>
   <% end %>
 </div>
-</center>
+</p>
 
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
