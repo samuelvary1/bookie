@@ -1,3 +1,4 @@
+<h1>User Profile</h1>
 <p id="notice"><%= notice %></p>
 <p>
 	<%= image_tag avatar_url(@user) %>
@@ -10,6 +11,11 @@
 <p>
   <b>Email:</b>
   <%= @user.email %>
+</p>
+
+<p>
+	<b>About me:</b>
+	<%= @user.bio %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

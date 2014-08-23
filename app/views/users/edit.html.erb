@@ -24,13 +24,18 @@
   </p>
 
   <p>
-    <%= f.label :password %><br />
+    <%= f.label :password, "Change Password" %><br />
     <%= f.password_field :password %>
   </p>
 
   <p>
     <%= f.label :password_confirmation, "Confirm Password" %><br />
     <%= f.password_field :password_confirmation %>
+  </p>
+
+  <p>
+  	<%= f.label :bio, "About me:" %><br />
+  	<%= f.text_field :bio %>
   </p>
   
   <p>
