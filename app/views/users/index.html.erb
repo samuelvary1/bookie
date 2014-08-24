@@ -2,6 +2,7 @@
 <p id="notice"><%= notice %></p>
 <table>
   <tr>
+    <th>User ID</th>
     <th>Avatar</th>
     <th>Name</th>
     <th>Email</th>
@@ -12,6 +13,7 @@
  
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.id %></td>
     <td><%= image_tag avatar_url(user) %></td>
     <td><%= user.name %></td>
     <td><%= user.email %></td>

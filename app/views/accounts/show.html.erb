@@ -7,7 +7,8 @@
 
 <p> 
 	<b>Owner:</b>
-	<%= @account.user_id %>
+	<%= @account.user.name %>
+	<%= link_to 'See Profile', user_path(@account.user) %>
 </p>
 
 
