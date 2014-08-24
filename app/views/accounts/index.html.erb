@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Balance</th>
+    <th>Owner</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,6 +12,7 @@
 <% @accounts.each do |account| %>
   <tr>
     <td>$<%= account.balance %></td>
+    <td><%= account.user_id %></td>
     <td><%= link_to 'Show', account %></td>
     <td><%= link_to 'Edit', edit_account_path(account) %></td>
     <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
