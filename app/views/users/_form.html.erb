@@ -31,17 +31,16 @@
     <%= f.password_field :password_confirmation %>
   </p>
 
-  <p>
+<p>
     <%= f.label :roles %><br />
-    <% for role in Role.all %>
-      <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
-      <%=h role.name %><br />
-      <% end %>
+    <% for role in User::ROLES %>
+      <%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>
+      <%=h role.humanize %><br />
+    <% end %>
+    <%= hidden_field_tag "user[roles][]", "" %>
   </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <p><%= f.submit %></p>
 
 
 <% end %>
