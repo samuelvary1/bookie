@@ -29,6 +29,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'better'
 
+gem 'declarative_authorization'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
