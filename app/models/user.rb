@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   # acts_as_authentic
   # has_secure_password
 
-  attr_accessible :id, :name, :email, :password, :password_confirmation, :bio
+  attr_accessible :id, :name, :email, :password, :password_confirmation, :bio, :roles_mask, :roles
 
   validates_uniqueness_of :email
 
