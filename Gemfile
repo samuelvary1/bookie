@@ -31,6 +31,8 @@ gem 'better'
 
 gem 'declarative_authorization'
 
+gem 'cancan'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
