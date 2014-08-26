@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
-  # acts_as_authentic
-  # has_secure_password
+  acts_as_authentic
+  has_secure_password
 
-  attr_accessible :id, :name, :email, :password, :password_confirmation, :bio, :roles_mask, :roles
+  attr_accessible :id, :name, :email, :password, :password_confirmation, :bio, :roles_mask, :roles, :persistence_token
 
   validates_uniqueness_of :email
 
