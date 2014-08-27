@@ -6,7 +6,7 @@ Bloggy::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   get "deposits" => "accounts#new", :as => "deposits"
   get "matches" => "matches#index", :as => "matches"
-  get "new_match" => "matches#create", :as => "new_match"
+  get "new_match" => "matches#new", :as => "new_match"
 
   resources :accounts
   resources :users

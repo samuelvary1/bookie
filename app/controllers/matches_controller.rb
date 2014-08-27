@@ -1,12 +1,16 @@
 class MatchesController < ApplicationController
 	def new
+		@match = Match.new
 	end
 
 	def create
 		@match = Match.new(params[:match])
 
-		@match.save
-		redirect_to @match
+		if @match.save
+			redirect_to @match
+		else
+			render 'new'
+		end
 	end
 
 	def show
