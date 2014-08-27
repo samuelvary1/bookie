@@ -1,0 +1,56 @@
+<%= form_for :match, url: matches_path do |f| %>
+
+  <p>
+    <%= f.label :home_team %><br>
+    <%= f.text_field :home_team %>
+  </p>
+ 
+  <p>
+    <%= f.label :away_team %><br>
+    <%= f.text_field :away_team %>
+  </p>
+
+  <p>
+    <%= f.label :home_team_odds %><br>
+    <%= f.text_field :home_team_odds %>
+  </p>
+
+  <p>
+    <%= f.label :away_team_odds %><br>
+    <%= f.text_field :away_team_odds %>
+  </p>
+
+  <p>
+    <%= f.label :home_team_wager %><br>
+    <%= f.text_field :home_team_wager %>
+  </p>
+
+  <p>
+    <%= f.label :away_team_wager %><br>
+    <%= f.text_field :away_team_wager %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :result %><br>
+    <%= f.text_field :result %>
+  </p>
+
+  <p>
+    <%= f.label :player1_id %><br>
+    <%= f.text_field :player1_id %>
+  </p>
+
+  <p>
+    <%= f.label :player2_id %><br>
+    <%= f.text_field :player2_id %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
