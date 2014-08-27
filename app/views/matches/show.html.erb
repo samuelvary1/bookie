@@ -1,31 +1,47 @@
-<h1>Match Facts</h1>
-
+<h1>Listing Matches / Results</h1>
 <p>
-	<b>Date:</b>
-	<%= @match.date %>
+  <strong>Home Team:</strong>
+  <%= @match.home_team %>
+</p>
+ 
+<p>
+  <strong>Away Team:</strong>
+  <%= @match.away_team %>
 </p>
 
 <p>
-	<b>Match ID:</b>
-	<%= @match.id %>
+  <strong>Home Team Odds:</strong>
+  <%= @match.home_team_odds %>
 </p>
 
 <p>
-  <b>Home Team:</b>
-  <%= @match.home_team %><br />
-  <%= @match.home_team_odds %><br />
+  <strong>Away Team Odds:</strong>
+  <%= @match.away_team_odds %>
+</p>
+
+<p>
+  <strong>Home Team Wager:</strong>
   <%= @match.home_team_wager %>
 </p>
 
 <p>
-  <b>Away Team:</b>
-  <%= @match.away_team %><br />
-  <%= @match.away_team_odds %><br />
-  <%= @match.away_team_wager %><br />
+  <strong>Away Team Wager:</strong>
+  <%= @match.away_team_wager %>
 </p>
 
 <p>
-	<b>Result:</b>
-	<%= @match.result %>
+  <strong>Date:</strong>
+  <%= @match.date %>
 </p>
 
+<p>
+  <strong>Player1:</strong>
+  <%= @match.player1_id %>
+</p>
+
+<p>
+  <strong>Player2:</strong>
+  <%= @match.player2_id %>
+</p>
+
+<%= link_to "Create New Match", new_match_path %>

@@ -1,3 +1,33 @@
 <h1>Listing Matches / Results</h1>
 
+<table>
+	<tr>
+		<th>Home Team:</th>
+		<th>Away Team:</th>
+		<th>Home team odds:</th>
+		<th>Away team odds:</th>
+		<th>Home team wager:</th>
+		<th>Away team wager:</th>
+		<th>Date:</th>
+		<th>Result:</th>
+		<th>Player 1:</th>
+		<th>Player 2:</th>
+	</tr>
+
+	<% @matches.each do |match| %>
+		<tr>
+			<td><%= match.home_team %></td>
+			<td><%= match.away_team %></td>
+			<td><%= match.home_team_odds %></td>
+			<td><%= match.away_team_odds %></td>
+			<td><%= match.home_team_wager %></td>
+			<td><%= match.away_team_wager %></td>
+			<td><%= match.date %></td>
+			<td><%= match.result %></td>
+			<td><%= match.player1_id %></td>
+			<td><%= match.player2_id %></td>
+		</tr>
+	<% end %>
+</table>
+
 <%= link_to "Create New Match", new_match_path %>
