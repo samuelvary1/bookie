@@ -21,6 +21,13 @@ class MatchesController < ApplicationController
 		@matches = Match.all
 	end
 
+	def destroy
+		@match = Match.find(params[:id])
+		@match.destroy
+
+		redirect_to matches_path
+	end
+
 	private
 
 	def match_params
