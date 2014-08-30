@@ -11,7 +11,9 @@ Bloggy::Application.routes.draw do
   resources :accounts
   resources :users
   resources :sessions
-  resources :matches
+  resources :matches do
+    resources :comments
+  end
   
   match 'login' => 'sessions#new', :as => :login
   match 'logout' => 'sessions#destroy', :as => :logout

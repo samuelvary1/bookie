@@ -1,6 +1,15 @@
 class MatchesController < ApplicationController
+	
+	load_and_authorize_resource
+
+	def index
+		@matches = Match.all
+	end
+
 	def new
-		@match = Match.new
+	end
+
+	def edit
 	end
 
 	def create
@@ -17,15 +26,20 @@ class MatchesController < ApplicationController
 		@match = Match.find(params[:id])
 	end
 
-	def index
-		@matches = Match.all
-	end
-
 	def destroy
 		@match = Match.find(params[:id])
 		@match.destroy
 
 		redirect_to matches_path
+	end
+
+	def update
+		if @match.update_attributes(params[:match])
+			flash[:notice] = "Successfully updated match"
+			redirect_to @match
+		else 
+			render 'edit'
+		end
 	end
 
 	private
