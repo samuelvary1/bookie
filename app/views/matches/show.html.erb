@@ -48,7 +48,7 @@
 <% @match.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
-    <%= comment.user %>
+    <%= @current_user.email %>
   </p>
 
   <p>
