@@ -61,7 +61,7 @@
 <%= form_for([@match, @match.comments.build]) do |f| %>
   <p>
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_field :body %>
   </p>
   <p>
     <%= f.submit %>
