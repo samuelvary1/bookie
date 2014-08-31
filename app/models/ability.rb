@@ -16,8 +16,8 @@ class Ability
 			can :create, Match
 			can :update, Match do |match|
 				match.try(:user) == user
+				end
 			end
 		end
 	end
-end
 end
