@@ -48,7 +48,7 @@
 <% @match.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
-    <%= @current_user.email %>
+    <!-- how to display current_user as author (permanently)?? -->
   </p>
 
   <p>
@@ -68,8 +68,15 @@
   </p>
 <% end %>
 
-<%= link_to "Back", matches_path %>
-| <%= link_to 'Edit', edit_match_path(@match) %>
+  <p>
+    <% if can? :update, @match %>
+      <%= link_to "Edit", edit_match_path(@match) %> |
+    <% end %>
+    <% if can? :destroy, @match %>
+      <%= link_to "Destroy", @match, :method => :delete, :confirm => "Are you sure?" %> |
+    <% end %>
+    <%= link_to "Back to Matches", matches_path %>
+  </p>
 
 
 

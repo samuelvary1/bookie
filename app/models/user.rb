@@ -11,6 +11,11 @@ class User < ActiveRecord::Base
 
   ROLES = %w[admin moderator player]
 
+  # admin can do anything
+  # moderator can create matches
+  # player can bet, comment, look at match results
+  # player can also edit their OWN profile
+
   def roles=(roles)
     self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum
   end

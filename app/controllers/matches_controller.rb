@@ -6,15 +6,17 @@ class MatchesController < ApplicationController
 		@matches = Match.all
 	end
 
+	def show
+	end
+
 	def new
 	end
 
 	def edit
+
 	end
 
 	def create
-		@match = Match.new(params[:match])
-
 		if @match.save
 			redirect_to @match
 		else
@@ -22,12 +24,7 @@ class MatchesController < ApplicationController
 		end
 	end
 
-	def show
-		@match = Match.find(params[:id])
-	end
-
 	def destroy
-		@match = Match.find(params[:id])
 		@match.destroy
 
 		redirect_to matches_path
@@ -36,7 +33,7 @@ class MatchesController < ApplicationController
 	def update
 		if @match.update_attributes(params[:match])
 			flash[:notice] = "Successfully updated match"
-			redirect_to @match
+			redirect_to match_path(@match)
 		else 
 			render 'edit'
 		end
