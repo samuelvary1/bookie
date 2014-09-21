@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    before_filter :authorize
+    # before_filter :authorize
     @users = User.all
 
     respond_to do |format|

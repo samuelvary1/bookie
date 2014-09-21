@@ -27,8 +27,6 @@ gem 'authlogic'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
-gem 'better'
-
 gem 'declarative_authorization'
 
 gem 'cancan'
@@ -47,7 +45,7 @@ gem 'strong_parameters'
 # To use debugger
 gem 'debugger'
 
-group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-end
+# group :development do
+#   gem "better_errors"
+#   gem "binding_of_caller"
+# end
