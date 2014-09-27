@@ -17,7 +17,7 @@ Bloggy::Application.routes.draw do
   
   match 'login' => 'sessions#new', :as => :login
   match 'logout' => 'sessions#destroy', :as => :logout
-
+  match 'delete' => 'users#destroy', :as => :delete
 
 
 

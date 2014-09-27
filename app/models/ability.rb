@@ -12,7 +12,7 @@ class Ability
 			can :update, Comment do |comment|
 				comment.try(:user) == user || user.role?(:moderator)
 			end
-		if user.role?(:player)
+		if user.role?(:moderator)
 			can :create, Match
 			can :update, Match do |match|
 				match.try(:user) == user
