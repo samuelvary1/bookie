@@ -2,7 +2,6 @@ class CommentsController < ApplicationController
 	load_and_authorize_resource
 
 	def new
-		
 	end
 
 	def create
@@ -33,9 +32,7 @@ class CommentsController < ApplicationController
 	def index
 	end
 
-
-
-		def comment_params
-			params.require(:comment).permit(:body)
-		end
+	def comment_params
+		params.require(:comment).permit(:body)
+	end
 end
