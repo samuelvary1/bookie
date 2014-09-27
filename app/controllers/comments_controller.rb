@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 	def create
 		@match = Match.find(params[:match_id])
 		@comment.user = current_user
+	
 		@comment = @match.comments.create(comment_params)
 		redirect_to match_path(@match)
 	end
@@ -33,6 +34,6 @@ class CommentsController < ApplicationController
 	end
 
 	def comment_params
-		params.require(:comment).permit(:body)
+		params.require(:comment, :author_name).permit(:body)
 	end
 end
