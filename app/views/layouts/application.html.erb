@@ -5,23 +5,19 @@
 
   <title>Sportsbook</title>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  
-  
 </head>
 <body>
 
 <%= yield %>
 
 <!-- tells you who is logged in -->
-<p>
-<center>
-<div class="link">
+  <p>
+  <center>
+  <div class="link">
 
   <% if current_user %>
 
-    Logged in as <%= current_user.email %>
+  Logged in as <%= current_user.email %>
     
   <br>
     <%= link_to "Log out", logout_path %> |
