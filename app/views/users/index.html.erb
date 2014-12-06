@@ -1,0 +1,37 @@
+<center><h1>Current Users</h1>
+
+<%= link_to 'Create New User', new_user_path %> |
+<%= link_to 'Home', root_path %>
+
+</center>
+
+<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <th>User ID</th>
+    <th>Avatar</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role(s)</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= image_tag avatar_url(user) %></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.roles %></td>
+    <td><%= link_to 'Show Profile', user %></td>
+
+    <% if can? :destroy, User %>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+ 
+<br />
