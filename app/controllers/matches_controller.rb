@@ -1,5 +1,4 @@
 class MatchesController < ApplicationController
-	
 	load_and_authorize_resource
 
 	def index
@@ -13,7 +12,6 @@ class MatchesController < ApplicationController
 	end
 
 	def edit
-
 	end
 
 	def create
@@ -42,6 +40,6 @@ class MatchesController < ApplicationController
 	private
 
 	def match_params
-		params.require(:match).permit(:home_team, :away_team, :home_team_odds, :away_team_odds, :home_team_wager, :away_team_wager, :date, :result, :player1_id, :player2_id)
+		params.require(:match).permit(:away_team, :home_team, :away_team_odds, :home_team_odds, :away_team_wager, :home_team_wager, :date, :result, :player1_id, :player2_id)
 	end
 end
