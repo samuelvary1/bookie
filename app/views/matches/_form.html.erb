@@ -1,18 +1,13 @@
 <%= form_for :match, url: matches_path do |f| %>
 
   <p>
-    <%= f.label :home_team %><br>
-    <%= f.text_field :home_team %>
-  </p>
- 
-  <p>
     <%= f.label :away_team %><br>
     <%= f.text_field :away_team %>
   </p>
 
   <p>
-    <%= f.label :home_team_odds %><br>
-    <%= f.text_field :home_team_odds %>
+    <%= f.label :home_team %><br>
+    <%= f.text_field :home_team %>
   </p>
 
   <p>
@@ -21,13 +16,18 @@
   </p>
 
   <p>
-    <%= f.label :home_team_wager %><br>
-    <%= f.text_field :home_team_wager %>
+    <%= f.label :home_team_odds %><br>
+    <%= f.text_field :home_team_odds %>
   </p>
 
   <p>
     <%= f.label :away_team_wager %><br>
     <%= f.text_field :away_team_wager %>
+  </p>
+
+  <p>
+    <%= f.label :home_team_wager %><br>
+    <%= f.text_field :home_team_wager %>
   </p>
 
   <p>
