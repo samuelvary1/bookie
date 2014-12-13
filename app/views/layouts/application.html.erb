@@ -4,16 +4,14 @@
 <head>
 
   <title>Sportsbook</title>
-
+  <%= stylesheet_link_tag 'application' %>
 </head>
 <body>
 
 <%= yield %>
 
 <!-- tells you who is logged in -->
-  <p>
-  <center>
-  <div class="link">
+  <div>
 
   <% if current_user %>
 
@@ -35,8 +33,7 @@
   </br>
   <% end %>
 </div>
-</center>
-</p>
+
 
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
