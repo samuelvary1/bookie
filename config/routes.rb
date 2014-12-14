@@ -4,9 +4,11 @@ Bloggy::Application.routes.draw do
   
   get "welcome/index"
   get "signup" => "users#new", :as => "signup"
+
   get "deposits" => "accounts#new", :as => "deposits"
   get "matches" => "matches#index", :as => "matches"
   get "new_match" => "matches#new", :as => "new_match"
+
 
   resources :accounts
   resources :users
@@ -17,7 +19,10 @@ Bloggy::Application.routes.draw do
   
   match 'login' => 'sessions#new', :as => :login
   match 'logout' => 'sessions#destroy', :as => :logout
-  match 'delete' => 'users#destroy', :as => :delete
+  match 'destroy' => 'users#destroy', :as => :destroy
+
+
+
 
 
 
