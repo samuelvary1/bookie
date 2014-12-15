@@ -15,11 +15,6 @@ class MatchesController < ApplicationController
 	end
 
 	def create
-		if @match.save
-			redirect_to @match
-		else
-			render 'new'
-		end
 	end
 
 	def destroy

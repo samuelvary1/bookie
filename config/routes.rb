@@ -10,6 +10,7 @@ Bloggy::Application.routes.draw do
 
   get "matches" => "matches#index", :as => "matches"
   get "new_match" => "matches#new", :as => "new_match"
+  get "new_account" => "accounts#new", :as => "new_account"
 
 
   resources :accounts
