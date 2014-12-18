@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140927173955) do
+ActiveRecord::Schema.define(:version => 20141218175901) do
 
   create_table "accounts", :force => true do |t|
     t.integer  "balance",    :limit => 255
@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(:version => 20140927173955) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "password_digest"
-    t.string   "bio"
     t.integer  "roles_mask"
     t.string   "persistence_token"
   end

@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :comments
 
-  attr_accessible :id, :name, :email, :password, :password_confirmation, :bio, :roles_mask, :roles, :account, :persistence_token
+  attr_accessible :id, :name, :email, :password, :password_confirmation, :roles_mask, :roles, :account, :persistence_token
 
   validates_uniqueness_of :email
 
