@@ -16,6 +16,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
  
 <% @users.each do |user| %>
@@ -26,13 +27,8 @@
     <td><%= user.email %></td>
     <td><%= user.roles %></td>
     <td><%= link_to 'Show Profile', user %></td>
-
-
-    <% if can? :destroy, User %>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-    <% end %>
-  </tr>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
 <% end %>
 </table>
  
-<br />
+<br/>
