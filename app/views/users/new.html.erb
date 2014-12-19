@@ -1,5 +1,5 @@
 <h1>Registration</h1>
-
+<center>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -34,7 +34,8 @@
   </p>
 
   <p><%= f.submit "Submit" %></p>
-  
+
 <% end %>
 
 <%= link_to 'View Registered Users', users_path %>
+</center>
