@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email
 
-  scope :with_role, lambda { |role| {:conditions => "roles_mask & #{2**ROLES.index(role.to_s)} > 0 "} }
-
   ROLES = %w[admin moderator player]
 
   # admin can do anything
