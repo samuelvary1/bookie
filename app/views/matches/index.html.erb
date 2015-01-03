@@ -1,0 +1,44 @@
+<h1>Listing Matches / Results</h1>
+
+<%= stylesheet_link_tag 'matches' %>
+
+<div class="nav">
+	<%= link_to "Create New Match (admin only)", new_match_path %> | <%= "Place a wager" %> | <%= link_to 'Home', root_path %>
+</div>
+
+<table>
+	<tr>
+
+		<th>Away Team:</th>
+		<th>Home Team:</th>
+
+		<th>Away team odds:</th>
+		<th>Home team odds:</th>
+
+
+		<th>Away team wager:</th>
+		<th>Home team wager:</th>
+		<th>Date:</th>
+		<th>Result:</th>
+		<th>Player 1:</th>
+		<th>Player 2:</th>
+	</tr>
+
+	<% @matches.each do |match| %>
+		<tr>
+			<td><%= match.away_team %></td>
+			<td><%= match.home_team %></td>
+			<td><%= match.away_team_odds %></td>
+			<td><%= match.home_team_odds %></td>
+			<td><%= match.away_team_wager %></td>
+			<td><%= match.home_team_wager %></td>
+			<td><%= match.date %></td>
+			<td><%= match.result %></td>
+			<td><%= match.player1_id %></td>
+			<td><%= match.player2_id %></td>
+			<td><%= link_to "Show", match_path(match) %></td>
+			<td><%= link_to "Edit", edit_match_path(match) %></td>
+		</tr>
+	<% end %>
+</table>
+

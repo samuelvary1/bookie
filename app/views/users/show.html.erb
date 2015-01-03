@@ -1,0 +1,27 @@
+<h1>User Profile</h1>
+<p id="notice"><%= notice %></p>
+<p>
+	<%= image_tag avatar_url(@user) %>
+</p>
+<p>
+	<b>User ID:</b>
+	<%= @user.id %>
+</p>
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %></p>
+
+<p>
+	<b>Role(s):</b>
+	<%= @user.roles %>
+</p>
+
+
+<%= link_to 'Update Information', edit_user_path(@user) %> |
+
+<%= link_to 'Back', users_path %>

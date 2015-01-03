@@ -1,0 +1,93 @@
+<h1>Listing Matches / Results</h1>
+<p>
+  <strong>Home Team:</strong>
+  <%= @match.home_team %>
+</p>
+ 
+<p>
+  <strong>Away Team:</strong>
+  <%= @match.away_team %>
+</p>
+
+<p>
+  <strong>Home Team Odds:</strong>
+  <%= @match.home_team_odds %>
+</p>
+
+<p>
+  <strong>Away Team Odds:</strong>
+  <%= @match.away_team_odds %>
+</p>
+
+<p>
+  <strong>Home Team Wager:</strong>
+  <%= @match.home_team_wager %>
+</p>
+
+<p>
+  <strong>Away Team Wager:</strong>
+  <%= @match.away_team_wager %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @match.date %>
+</p>
+
+<p>
+  <strong>Player1:</strong>
+  <%= @match.player1_id %>
+</p>
+
+<p>
+  <strong>Player2:</strong>
+  <%= @match.player2_id %>
+</p>
+
+<h2>Comments</h2>
+<% @match.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.author_name %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@match, @match.comments.build]) do |f| %>
+  <p>
+    <%= f.label :author_name, 'Name' %><br />
+    <%= f.text_field :author_name %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+  <p>
+    <% if can? :update, @match %>
+      <%= link_to "Edit", edit_match_path(@match) %> |
+    <% end %>
+    <% if can? :destroy, @match %>
+      <%= link_to "Destroy", @match, :method => :delete, :confirm => "Are you sure?" %> |
+    <% end %>
+    <%= link_to "Back to Matches", matches_path %>
+  </p>
+
+
+
+
+
+
+
+
+
+
