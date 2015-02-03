@@ -43,7 +43,7 @@ gem 'strong_parameters'
 # gem 'capistrano'
 
 # To use debugger
-gem 'debugger'
+
 
 # group :development do
 #   gem "better_errors"
