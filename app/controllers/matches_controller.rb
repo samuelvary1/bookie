@@ -18,7 +18,17 @@ class MatchesController < ApplicationController
 	end
 
 	def create
-		@match = Match.new(params[:match])
+    @match = Match.new(params[:match])
+
+    respond_to do |format|
+      if @match.save
+        format.html { redirect_to @match, notice: 'Match was successfully entered.' }
+        format.json { render json: @match, status: :created, location: @match }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @match.errors, status: :unprocessable_entity }
+      end
+    end
 	end
 
 	def destroy
