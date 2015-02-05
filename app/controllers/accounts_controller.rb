@@ -1,7 +1,5 @@
 class AccountsController < ApplicationController
-  # load_and_authorize_resource
-  # is it a good idea to use this CanCan method to replace the CRUD methods
-  # below?
+  load_and_authorize_resource
 
   def index
     @accounts = Account.all
@@ -9,6 +7,16 @@ class AccountsController < ApplicationController
 
   def create
     @account = Account.new(params[:account])
+
+    respond_to do |format|
+      if @account.save
+        format.html { redirect_to @account, notice: 'Account was successfully created.' }
+        format.json { render json: @account, status: :created, location: @account }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def show
