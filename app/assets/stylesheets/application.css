@@ -4,9 +4,7 @@
 *= require simple-line-icons
 *= require animate
 *= require switchery.min
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/plugins/jvectormap/css/jquery-jvectormap-1.2.2.css">
-<link rel="stylesheet" href="assets/plugins/todo/css/todos.css">
-<link rel="stylesheet" href="assets/plugins/morris/css/morris.css">
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+*= require main
+*= require jquery-jvectormap-1.2.2
+*= require todos
+*= require morris
