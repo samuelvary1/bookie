@@ -1,4 +1,4 @@
-Bloggy::Application.routes.draw do
+Oracle::Application.routes.draw do
 
   root :to => "welcome#index"
   

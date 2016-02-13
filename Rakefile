@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Bloggy::Application.load_tasks
+Oracle::Application.load_tasks
